@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%= shopName %></title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <h1>About <%= shopName %></h1>
+    <p>We sell all sorts of drinks here at The Hydration Hub.</p>
+
+    <h2>Shop Locations</h2>
+    <ul>
+        <% for(let i = 0; i < shopLocations.length; i++){ %>
+          <li>
+            <strong>Manager:</strong> <%= shopLocations[i].manager %><br>
+            <strong>Address:</strong> <%= shopLocations[i].address %>
+          </li>
+        <% } %>
+    </ul>
+  </body>
+</html>

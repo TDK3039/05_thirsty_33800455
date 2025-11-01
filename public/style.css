@@ -1,0 +1,17 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #d6efef;
+  padding: 20px;
+}
+
+h1 {
+    font-family: 'Trebuchet MS', sans-serif;
+  color: #2c4550;
+}
+
+form {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
