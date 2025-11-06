@@ -36,8 +36,14 @@ router.get("/search",(req, res) => {
 });
 
 router.get('/search_result', function (req, res){
-    res.send("You searched for " + req.query.search_text + " in " + req.query.category);
+  const { search_text, category } = req.query;
+  res.render("search_results.ejs", {
+    shopName: shopData.shopName,
+    search_text,
+    category
+  });
 });
+
 
 router.get("/register", (req, res) => {
     res.render("register.ejs", shopData);
@@ -53,7 +59,13 @@ router.post("/registered", (req, res) => {
         return res.send("This is an invalid email address. Please go back and enter a valid email.")
     }
 
-    res.send(`Hello ${first} ${last}, you are now registered with this email!: ${email}`);
+    res.render("registered.ejs", {
+    shopName: shopData.shopName,
+    first,
+    last,
+    email
+  });
+
 });
 
 //Survey Routes 

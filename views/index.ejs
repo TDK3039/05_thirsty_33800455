@@ -3,9 +3,32 @@
   <head>
     <title><%= shopName %></title>
     <link rel="stylesheet" href="/style.css">
+    <style>
+      .nav-buttons{
+        margin-top: 20px;
+      }
+      .nav-buttons a{
+        display: inline-block;
+        margin-right: 10px;
+        padding: 10px 15px;
+        background-color: #2c4550;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+      .nav-buttons a:hover{
+        background-color: #1e2f36;
+      }
+    </style>
   </head>
   <body>
     <h1>Welcome to <%= shopName %> </h1>
+    <div class="nav-buttons">
+      <a href="/about">About</a>
+      <a href="/search">Search</a>
+      <a href="/register">Register</a>
+      <a href="/survey">Survey</a>
+    </div>
     <h2>Here are some of the things that we sell:</h2>
     <ul>
       <% for(let i = 0; i < productCategories.length; i++) { 
